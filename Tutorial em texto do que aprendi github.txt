@@ -35,7 +35,127 @@ Digite o comando "git status"
 Para atualizar esse arquivo no GitHub é so repetir os processos
    - digite "git add ."
    - digite "git commit -m "(escreve o que foi modificado nessa nova versão)""
+   - digite "git push"
    - depois é só dar um f5 na pagina que sera atualizado o arquivo.
 
 Digite o comando "git reflog"
    - esse comando permite visualizar as versões que foram adicionadas até o momento.
+   - aparece também o id de cada versão no lado esquerdo.
+
+Digite o comando "git reset --hard "(numero do id)""
+   - esse comando tem que ser usado com muito cuidado.
+   - esse comando permite voltar o código da maneira que ele estava na versão desse commit.
+   - se eu voltar pra primeira versão e quiser "desfazer" e voltar para como era atualmente, é só pegar o id do commit mais atual.
+
+***** Branch
+Digite "git branch"
+- esse comando permite visualizar quais branchs estão disponiveis.
+
+Digite "git branch "(nome que você quiser dar para a nova branch, ex: staging)""
+- esse comando permite criar uma nova branch.
+
+Digite "git branch" novamente
+- agora vai aparecer as 2 branchs disponiveis, uma em verde e outra em branco, a que estiver em verde, é a que está sendo usada no momento.
+
+Digite "git checkout "(nome da branch, ex: staging)""
+- esse comando faz a troca para a branch que você quer.
+- se digitar "git branch" ira perceber que foi a outra branch que está verde agora.
+
+* Agora se eu alterar algum arquivo na pasta e tentar salvar na nuvem(Github), irá salvar um novo arquivo em uma nova branch.
+- exemplo: o arquivo meunome.txt já estava na branch 1, porém eu troquei a branch e quis salvar a alteração na branch 2.
+         - esse arquivo vai estar em duas branchs, a branch 1 vai ter a versão anterior, e a branch 2 terá a versão atualizada.
+         - isso é interessante quando eu quero ter uma branch rodando alguma coisa, e quiser fazer atualizações, sem atrapalhar o andamento da branch 1.
+
+Faça uma alteração em algum arquivo na pasta e salve.
+
+Digite "git status"
+
+Digite "git add ."
+
+Digite "git commit -m "(escreve o que foi modificado nessa nova versão)""
+
+Digite "git push" 
+- irá aparecer uma mensagem para copiar e colar, para fazer a alteralção pela primeira vez na nova branch.
+- logo após é só dar f5 na pagina da GitHub e ver a nova branch com esse arquivo modificado.
+
+
+***** Git Merge
+- é o termo para unir codigos, de uma branch para a outra.
+
+Digite "git branch"
+- somente para ver qual branch você está atualmente.
+
+Digite "git pull"
+- para receber as atualizações do projeto(quanto tiver trabalhando em equipe)
+- ex: 
+
+Antes:
+
+Servidor:
+A → B → C
+
+Seu computador:
+A → B
+
+Depois do git pull:
+
+Servidor:
+A → B → C
+
+Seu computador:
+A → B → C
+
+Digite "git merge "(nome da branch que você quer puxar a atualização do arquivo)""
+- esse comando permite fazer com que o arquivo que estava "desatualizado na branch 1, receba o mesmo arquivo que estava n branch 2, assim eles ficam iguais.
+
+Digite "git push"
+- vai na nuvem e dê f5 para aparecer as atualizações.
+
+
+
+**** Git Ignore
+é o termo para ignorar algum arquivo e ele não subir pra nuvem junto com os demais, como um arquivo de senha.
+
+Digite "touch .gitignore
+ - esse comando irá criar um novo arquivo de texto dentro da pasta no windows
+ - é importante criar esse arquivo no inicio do projeto.
+
+Abra o arquivo ".gitignore"
+
+Digite dentro dele, quais arquivos você quer esconder e não subir pra nuvem.
+- exemplo: um arquivo de texto chama senhas.txt
+
+Digite "git status"
+- os arquivos de senhas não apareceram, o unico que estará aparecendo será o arquivo do proprio .gitignore
+- esse arquivo deve ser ecaminhado pra nuvem, pois ele que controla, o que é ignorado.
+
+Digite "git add ."
+- aqui é só continuar a adicionar como qualquer outro arquivo.
+
+Digite "git commit -m ("adicionando arquivo gitignore")
+
+Digite "git push"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+   
+
