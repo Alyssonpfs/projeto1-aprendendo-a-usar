@@ -1,0 +1,41 @@
+Crie uma pasta em seu computador
+
+Inicialize o repositório, clicando com o botão direito e depois em Git Bash Here
+   - isso significa que eu estou criando uma linha de comando, dentro dessa pasta.
+
+Digite o comando "git init"
+   - após isso será criado um arquivo(esse arquivo não precisa ser modificado), para visualizar esse arquivo vá em: Visualizar > Mostrar > Itens Ocultos.
+
+Crie algum arquivo, como um arquivo de txt, e salve.
+
+Digite o comando "git status"
+   - esse comando mostra um relatorio de quais arquivos já foram incluidos no controle de versão, e se foram atualizados.
+
+Digite o comando "git add ."
+   - esse comando todos os arquivos que estavam pendentes(aparece em vermelho nos status)
+   - se quiser adicionar somente um arquivo em especifico tem o comando "git add "nome do arquivo""
+
+Digite o comando "git commit -m "commit inicial"
+   - cada vez que criar ou atualizar algum arquivo tem que digitar esse codigo para modificar a commit
+   - toda nova versão que for feita é bom descrever no nome do commit o que foi feito, exemplo: "git commit -m "adicionado cadastro de clientes""
+
+No site do GitHub crie um novo repositorio e nomeio
+
+Depois de criado, copie o link da pagina
+
+Digite o comando "git remote add origin "(link q foi copiado)""
+
+Digite o comando "git push --set-upstream origin master
+
+Entre na pasta e altere algum arquivo que já estava salvo.
+
+Digite o comando "git status"
+   - vai aparecer em vermelho uma mensagem que 1 arquivo foi modificado e o nome do arquivo
+
+Para atualizar esse arquivo no GitHub é so repetir os processos
+   - digite "git add ."
+   - digite "git commit -m "(escreve o que foi modificado nessa nova versão)""
+   - depois é só dar um f5 na pagina que sera atualizado o arquivo.
+
+Digite o comando "git reflog"
+   - esse comando permite visualizar as versões que foram adicionadas até o momento.
